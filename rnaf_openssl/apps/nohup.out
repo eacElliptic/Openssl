@@ -1,0 +1,8 @@
+
+(gedit:4156): Gtk-CRITICAL **: _gtk_widget_captured_event: assertion 'WIDGET_REALIZED_FOR_EVENT (widget, event)' failed
+
+** (gedit:4156): CRITICAL **: gedit_multi_notebook_get_active_tab: assertion 'GEDIT_IS_MULTI_NOTEBOOK (mnb)' failed
+
+(gedit:4156): Gtk-CRITICAL **: gtk_action_group_get_action: assertion 'GTK_IS_ACTION_GROUP (action_group)' failed
+
+(gedit:4156): Gtk-CRITICAL **: gtk_action_set_sensitive: assertion 'GTK_IS_ACTION (action)' failed
