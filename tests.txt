@@ -1,0 +1,29 @@
+
+This file contains some results of tests.
+
+The computer used has these features: 
+	- Model		: Dell Precision Tower 3620
+	- OS		: Ubuntu gnome 16.04 (64 bits)
+	- Processor	: Intel Core i7-6700 CPU @ 3.40GHz × 8 
+	- Memory 	: 32GB
+	- gcc		: version 5.4.0 20160609
+
+Note : We have deactivated Intel-turbo boost technology and choosed stable frequency for CPU in the Bios before doing our tests.
+
+For glv, we used SECG curve secp256k1, command : ./apps/openssl speed ecdhk256
+
+For EAC-mult, we used a curve on a field of size 358 bits, command : ./apps/openssl speed ecdheac256
+
+These curves are supposed to provide security of 128 bits.
+
+Results below correspond to numbers of operations per second.
+An operation is the computation of 'kP' on the corresponding curve.
+ 
+
+
+GLV	|	GLV+MUX		|	GLV+RNAF	|	GLV+RNAF+MUX	|EAC
+--------|-----------------------|-----------------------|-----------------------|------
+4656.5	|	4513.0		|	4101.8		|	4063.7		|4252.6
+4635.9	|	4556.0		|	4144.0		|	4046.4		|4276.3
+4646.7	|	4580.9		|	4172.5		|	4013.5		|4272.0
+4625.8	|	4604.5		|	4120.4		|	4038.2		|4286.1
